@@ -1,0 +1,87 @@
+
+ 
+{% extends 'admin/adminheaderfooter.html' %}
+{% block content %}
+
+
+<!-- main content start -->
+<div class="main-content">
+
+  <!-- content -->
+  <div class="container-fluid content-top-gap">
+
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb my-breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Elements</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Content Blocks</li>
+      </ol>
+    </nav>
+    <!-- //breadcrumbs -->
+
+    <!-- forms -->
+        <section class="forms">
+<!-- forms 2 -->
+            <div class="card card_border py-2 mb-4">
+                <div class="card-body">
+                  
+                    <form action="#" method="post" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+                        
+                        
+                        <div class="form-group">
+                            <label for="proimage" class="input__label">product image</label>
+                            <input type="FILE" class="form-control input-style" name="proimage" id="proimage"
+                                placeholder="product image" value="{{x.proimage.url}}" required="">
+                        </div>
+                           
+                     
+                        <div class="form-group">
+                            <label for="proname" class="input__label">product name</label>
+                            <input type="text" class="form-control input-style" name="proname" id="proname"
+                                placeholder="product name" value="{{x.proname}}" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="proprice" class="input__label">product price </label>
+                            <input type="text" class="form-control input-style" name="proprice" id="proprice"
+                                placeholder="product price" value="{{x.proprice}}" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="prodescrp" class="input__label">product description</label>
+                            <input type="text" class="form-control input-style" name="prodescrp" id="prodescrp"
+                                placeholder="product description" value="{{x.prodescrp}}" required="">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-style mt-4">submit</button>
+                        <h4 style="color: green;">{{sucess}}</h4>
+                        <h4 style="color: red;">{{error}}</h4>
+                       
+                        
+                    </form>
+                    
+                </div>
+            </div>
+            <!-- //forms 2 -->
+            <!-- //forms 3 -->
+            <!-- //horizontal forms-->
+
+            <!-- supported elements -->
+            <!--  -->
+            
+            <!-- // -->
+            <!-- supported elements -->
+
+        </section>
+        <!-- //forms -->
+        </section>
+        <!-- //forms  -->
+
+    </div>
+    <!-- //content -->
+
+</div>
+<!-- main content end-->
+</section>
+{% endblock %}
+

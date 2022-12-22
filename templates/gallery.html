@@ -1,0 +1,173 @@
+{% extends "headerfooter.html" %}
+{% block content %}
+
+<!-- Main -->
+<!-- Gallery -->
+	<div class="gallery">
+		<div class="container">
+			<h2>Gallery</h2>
+			<div class="wthree_gallery_grids">
+				<div id="jzBox" class="jzBox">
+					<div id="jzBoxNextBig"></div>
+					<div id="jzBoxPrevBig"></div>
+					<img src="#" id="jzBoxTargetImg" alt=" " />
+					<div id="jzBoxBottom">
+						<div id="jzBoxTitle"></div>
+						<div id="jzBoxMoreItems">
+							<div id="jzBoxCounter"></div>
+							<i class="arrow-left" id="jzBoxPrev"></i> 
+							<i class="arrow-right" id="jzBoxNext"></i> 
+						</div>
+						<i class="close" id="jzBoxClose"></i>
+					</div>
+				</div>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					<div id="myTabContent" class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="home">
+							<div class="tab_img">
+								{% for x in prd %}
+                                <div class="col-md-3 agile_gallery_grids">
+                                        <div class="view view-sixth">
+                                           <img src="{{x.proimage.url}}" class="img-fluid" style="width: 200px;height: 200px;object-fit: contain;" alt="">
+                                            <div class="mask"></div>   
+                                            <p></p>
+                                        </div>
+                                </div>
+                            	{% endfor %}
+								<!-- <div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/tvs.jpg" class="jzBoxLink" title="ntorq">
+										<div class="view view-sixth">
+											<img src="/static/images/tvs.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/apachertr.jpg" class="jzBoxLink" title="apache rtr">
+										<div class="view view-sixth">
+											<img src="/static/images/apachertr.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/tvs-apache-rtr-180.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/tvs-apache-rtr-180.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/TVS-Bikes.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/TVS-Bikes.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div> -->
+								<div class="clearfix"> </div>
+							</div>
+							<!-- <div class="tab_img">
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/1-67.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/1-67.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/tvs-xl100-comfort.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/tvs-xl100-comfort.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/tvs-scooty-pep-plus-aqua.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/tvs-scooty-pep-plus-aqua.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/download (44).jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/download (44).jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div> -->
+								<div class="clearfix"> </div>
+							</div> 
+							<!-- <div class="tab_img">
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/2.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/2.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/9.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/9.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/10.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/10.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 agile_gallery_grids">
+									<a href="/static/images/7.jpg" class="jzBoxLink" title="Auto Car">
+										<div class="view view-sixth">
+											<img src="/static/images/7.jpg" alt=" " class="img-responsive" />
+											<div class="mask">
+												<p>See full image</p>
+											</div>
+										</div>
+									</a>
+								</div> -->
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //Gallery -->
+<!-- //Main -->
+{% endblock %}
